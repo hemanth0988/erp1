@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="sidebar collapsed">
+        <div class="menu">
+            <div class="menu-toggle" id="toggle-btn">
+                <img src="assets/icons/hamburgermenu.svg" alt="Menu Icon" class="icon">
+            </div>
+            <a href="dashboard.html" class="menu-item">
+                <img src="assets/icons/dashboard.svg" alt="Dashboard Icon" class="icon">
+                <span class="menu-text">Dashboard</span>
+            </a>
+            <a href="projects.html" class="menu-item">
+                <img src="assets/icons/projects.svg" alt="Projects Icon" class="icon">
+                <span class="menu-text">Projects</span>
+            </a>
+            <div class="menu-item has-dropdown">
+                <a href="#">
+                    <img src="assets/icons/estimation.svg" alt="Estimation Icon" class="icon">
+                    <span class="menu-text">Estimation</span>
+                    <img src="assets/icons/dropdownarrow.svg" alt="Dropdown Arrow" class="dropdown-icon">
+                </a>
+                <div class="dropdown-menu estimation-dropdown">
+                    <a href="client.html" class="dropdown-item">Client</a>
+                    <a href="enquiry.html" class="dropdown-item">Enquiry</a>
+                    <a href="quotation.html" class="dropdown-item">Quotation</a>
+                    <a href="po.html" class="dropdown-item">PO</a>
+                </div>
+            </div>
+            <div class="menu-item has-dropdown">
+                <a href="#">
+                    <img src="assets/icons/finance.svg" alt="Finance Icon" class="icon">
+                    <span class="menu-text">Finance</span>
+                    <img src="assets/icons/dropdownarrow.svg" alt="Dropdown Arrow" class="dropdown-icon">
+                </a>
+                <div class="dropdown-menu finance-dropdown">
+                    <a href="invoice.html" class="dropdown-item">Invoice</a>
+                    <a href="payment.html" class="dropdown-item">Payment</a>
+                    <a href="pettycashfinance.html" class="dropdown-item">Petty Cash</a>
+                    <a href="loan.html" class="dropdown-item">Loan</a>
+                </div>
+            </div>
+            <div class="menu-item has-dropdown">
+                <a href="#">
+                    <img src="assets/icons/documents.svg" alt="Documents Icon" class="icon">
+                    <span class="menu-text">Documents</span>
+                    <img src="assets/icons/dropdownarrow.svg" alt="Dropdown Arrow" class="dropdown-icon">
+                </a>
+                <div class="dropdown-menu documents-dropdown">
+                    <a href="company_docs.html" class="dropdown-item">Company Docs</a>
+                    <a href="employee_docs.html" class="dropdown-item">Employee Docs</a>
+                    <a href="subcontractor_docs.html" class="dropdown-item">Subcontractor Docs</a>
+                </div>
+            </div>
+            <a href="pettycash.html" class="menu-item">
+                <img src="assets/icons/pettycash.svg" alt="Petty Cash Icon" class="icon">
+                <span class="menu-text">Petty Cash</span>
+            </a>
+            <div class="menu-item has-dropdown">
+                <a href="#">
+                    <img src="assets/icons/noc&permits.svg" alt="NOC & Permits Icon" class="icon">
+                    <span class="menu-text">NOC & Permits</span>
+                    <img src="assets/icons/dropdownarrow.svg" alt="Dropdown Arrow" class="dropdown-icon">
+                </a>
+                <div class="dropdown-menu noc-permits-dropdown">
+                    <a href="noc.html" class="dropdown-item">NOC</a>
+                    <a href="permits.html" class="dropdown-item">Permits</a>
+                </div>
+            </div>
+            <a href="tasks.html" class="menu-item">
+                <img src="assets/icons/tasks.svg" alt="Tasks Icon" class="icon">
+                <span class="menu-text">Tasks</span>
+            </a>
+        </div>
+        <div class="dark-mode-toggle">
+            <span class="toggle-label">Dark Mode</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="dark-mode-checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

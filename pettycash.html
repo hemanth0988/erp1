@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petty Cash</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div class="content">
+        <header>
+            <h1>Petty Cash</h1>
+        </header>
+        <div style="text-align: right; margin-right: 20px; margin-bottom: 10px;">
+            <button class="add-new-btn">+ Add new</button>
+        </div>
+        <div class="content-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Req. no.</th>
+                        <th>Project name & no.</th>
+                        <th>Project type</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample row -->
+                    <tr>
+                        <td>2024-07-01</td>
+                        <td>001</td>
+                        <td>Project Alpha - 12345</td>
+                        <td>Construction</td>
+                        <td>Materials</td>
+                        <td>500.00</td>
+                        <td>
+                            <button class="view-details-btn" data-date="2024-07-01" data-req-no="001" data-project-name="Project Alpha - 12345" data-project-type="Construction" data-category="Materials" data-amount="500.00" data-details="Purchase of construction materials">
+                                <img src="assets/icons/viewdetails.svg" alt="View Details Icon">
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Overlay for viewing details -->
+    <div id="overlay-1" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn">&times;</span>
+            <div id="entry-details"></div>
+        </div>
+    </div>
+
+    <!-- Overlay for adding new entry -->
+    <div id="new-entry-overlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn">&times;</span>
+            <h2>Petty Cash Request Form</h2>
+            <form id="new-entry-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="req-no">Req. no.:</label>
+                        <input type="text" id="req-no" name="req-no" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="project-name">Project name & no.:</label>
+                        <input type="text" id="project-name" name="project-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-type">Project type:</label>
+                        <input type="text" id="project-type" name="project-type" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" name="category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" name="amount" step="0.01" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="details">Details:</label>
+                        <textarea id="details" name="details" required></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="add-attachment-btn" id="add-attachment-btn">Add Attachment</button>
+                    <input type="file" id="attachment-input" style="display: none;">
+                    <div id="attachment-list" class="attachment-list"></div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/overlay.js"></script>
+</body>
+</html>
